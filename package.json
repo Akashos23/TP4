@@ -1,0 +1,19 @@
+{
+  "name": "r6.a.05-tp-secu1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "../../Users/akash/Downloads/R6.A.05-TP-Secu1-main/R6.A.05-TP-Secu1-main/src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ../../Users/akash/Downloads/R6.A.05-TP-Secu1-main/R6.A.05-TP-Secu1-main/src/server.js",
+    "dev": "node --watch ../../Users/akash/Downloads/R6.A.05-TP-Secu1-main/R6.A.05-TP-Secu1-main/src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/basic-auth": "^5.1.1",
+    "@fastify/jwt": "^8.0.0",
+    "fastify": "^4.25.2"
+  }
+}
