@@ -10,6 +10,7 @@ const fastify = Fastify({
     logger: true,
     http2: true,
     https: {
+        allowHTTP1 : true,
         key: fs.readFileSync(path.join(__dirname, '..', 'clés', 'server.key')),
         cert: fs.readFileSync(path.join(__dirname, '..', 'clés', 'server.crt')),
     }
