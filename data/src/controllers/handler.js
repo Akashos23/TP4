@@ -1,8 +1,17 @@
-export const getAuthHandler = function (req, rep) {
+import fastify from 'fastify'
 
-    // Il faut mettre des trucs ici...
+export const getAuthHandler = async function (req, rep) {
+    const authHeader = req.headers['authorization']
+    const token = authHeader && authHeader.split(' ')[1]
 
-    return rep.send("Il faut mettre des trucs avant")
+    const decode = await req.jwtVerify(token)
+
+    if(decode.role === "admin"){
+        rep.send("Full Access")
+    }
+    if(decode.role === "utilisateur"){
+        rep.send("Accès limité")
+    }
 }
 
 export const getHomeHandler = (req, res) => {
