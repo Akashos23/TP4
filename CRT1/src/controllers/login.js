@@ -24,8 +24,6 @@ export const addUser = async (req, res) => {
       users.push(obj);
       res.status(200).send("Utilisateur bien enregistré")
     }
-
-    // A compléter
 }
 
 export const loginUser = async function (req, res) {
